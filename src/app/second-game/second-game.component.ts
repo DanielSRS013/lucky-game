@@ -3,12 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GameModel } from './model/gameForm';
 
 @Component({
-  selector: 'app-game',
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.css']
+  selector: 'app-second-game',
+  templateUrl: './second-game.component.html',
+  styleUrls: ['./second-game.component.css']
 })
-export class GameComponent implements OnInit {
-
+export class SecondGameComponent implements OnInit {
   gameForm!: FormGroup;
   resultadoAleatorio!: number | string;
   resultadoPessoa!: number | string;
@@ -16,7 +15,7 @@ export class GameComponent implements OnInit {
 
   geraNumero(){
     const gameVariavel = this.gameForm.getRawValue() as GameModel;
-    gameVariavel.numeroAleatorio = Math.floor(Math.random() * 100)+1;
+    gameVariavel.numeroAleatorio = Math.floor(Math.random() * 10);
     return this.resultadoAleatorio = gameVariavel.numeroAleatorio;
   }
 
@@ -45,4 +44,3 @@ export class GameComponent implements OnInit {
   get numeroAleatorio() {return this.gameForm.get('numeroAleatorio')!;}
 
 }
-

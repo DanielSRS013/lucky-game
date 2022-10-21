@@ -9,10 +9,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CommonModule} from "@angular/common";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import { SecondGameComponent } from './second-game/second-game.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    GameComponent
+    GameComponent,
+    SecondGameComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
